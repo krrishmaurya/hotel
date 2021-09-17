@@ -7,5 +7,6 @@ urlpatterns=[
     path('booking',Add_booking.as_view(),name='add'),
     path('client_details/',Detail.as_view(),name='details'),
     path('login',views.Login.as_view(),name='login'),
-    path('logout',views.Logout.as_view(),name='logout')
+    path('logout',views.Logout.as_view(),name='logout'),
+    path('view_booking',views.Display.as_view(),name='display')
 ]

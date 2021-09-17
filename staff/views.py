@@ -35,3 +35,16 @@ class  Logout(View):
     def get(self,request):
         auth.logout(request)
         return redirect('/')        
+
+
+class Display(View):
+    def get(self,request):
+        if  request.user.is_authenticated:
+            content={
+                'page_tittle':'Bookings',
+                'details': Booking.objects.all()
+            }
+            return render(request,'display.html',content)
+        else:
+               page='404.html'
+               return render(request,page)

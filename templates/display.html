@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<table>
+    <tr>
+        <th>Sr.no</th>
+        <th>Coustmer Name</th>
+        <th>Contact No</th>
+        <th>Email</th>
+        <th>Booking Date</th>
+    </tr>
+    {% for customer in details %}
+    <tr>
+        <th>{{customer.id}}</th>
+        <th>{{customer.customer_name}}</th>
+        <th>{{customer.contact_no}}</th>
+        <th>{{customer.email}}</th>
+        <th>{{customer.booking_date}}</th>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

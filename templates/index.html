@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content  %}
+{% if request.user.is_authenticated %}
+<h1>{{page_tittle}}</h1>
+<table>
+    <tr>
+        <th>Sr.no</th>
+        <th>Customer Name</th>
+        <th>Contact No</th>
+        <th>Booking Date</th>
+    </tr>
+    {% for added in bookings %}
+    <tr>
+        <td>{{added.id}}</td>
+        <td><a href="/client_details/?client_id={{added.id}}">{{added.customer_name}}</a></td>
+        <td>{{added.contact_no}}</td>
+        <td>{{added.booking_date}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+{% endblock %}

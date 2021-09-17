@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{page_tittle}}</h1>
+<table>
+    <tr>
+        <th>Sr.no</th>
+        <th>Coustmer Name</th>
+        <th>Contact No</th>
+        <th>Email</th>
+        <th>Booking Date</th>
+    </tr>
+    <tr>
+        <!-- added is the key in Details models import -->
+        <td>{{added.id}}</td>
+        <td>{{added.customer_name}}</td>
+        <td>{{added.contact_no}}</td>
+        <td>{{added.email}}</td>
+        <td>{{added.booking_date}}</td>
+    </tr> 
+    </table>
+{% endblock %}
